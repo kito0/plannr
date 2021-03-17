@@ -13,7 +13,7 @@ export default function DeadlineDialog({ setOpen }) {
 	const dispatch = useDispatch();
 	const [category, setCategory] = useState('');
 	const [description, setDescription] = useState('');
-	const [dueDate, setDueDate] = useState(new Date('2014-08-18T21:11:54'));
+	const [dueDate, setDueDate] = useState(new Date());
 
 	const handleDateChange = (date) => {
 		setDueDate(date);
