@@ -1,0 +1,54 @@
+.deadlines {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.deadlines .card {
+  width: 18vw;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.deadlines .card .card_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.deadlines .card .card_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4vh;
+  margin-top: -18px;
+}
+
+.deadlines .card .card_footer .button {
+  position: relative;
+  left: 55%;
+}
+
+.card_root {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0 30px;
+}
+/*# sourceMappingURL=deadlines.css.map */
