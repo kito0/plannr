@@ -15,10 +15,10 @@ export default function Deadlines() {
 	const date = new Date()
 	let dateString = "";
 	if(date.getMonth() >= 10) {
-		dateString += date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+		dateString += date.getFullYear() + "-" + parseInt(date.getMonth() + 1) + "-" + date.getDate();
 	}
 	else {
-		dateString += date.getFullYear() + "-0" + date.getMonth() + "-" + date.getDate();
+		dateString += date.getFullYear() + "-0" + parseInt(date.getMonth() + 1) + "-" + date.getDate();
 	}
 	
 
@@ -53,7 +53,17 @@ export default function Deadlines() {
 					<ul>
 						{deadlines.filter(deadline => (
 							(parseInt(deadline.dueDate.slice(5, 7)) > parseInt(dateString.slice(5, 7)) && 
-							parseInt(deadline.dueDate.slice(8, 10)) + parseInt(dateString.slice(8, 10)) <= 38)
+								(
+									parseInt(deadline.dueDate.slice(8, 10)) + parseInt(dateString.slice(8, 10)) <= 38
+								) 
+								&&
+								(
+									parseInt(deadline.dueDate.slice(8, 10)) + parseInt(dateString.slice(8, 10)) >= 31
+								)
+							)
+							||
+							(parseInt(deadline.dueDate.slice(5, 7)) === parseInt(dateString.slice(5, 7)) && 
+							parseInt(deadline.dueDate.slice(8, 10)) - parseInt(dateString.slice(8, 10)) <= 7)
 						)).map((filteredDeadline) => (
 							<DeadlineCard key={filteredDeadline._id} deadline={filteredDeadline} />
 						))}
@@ -67,8 +77,12 @@ export default function Deadlines() {
 				<AccordionDetails>
 					<ul>
 						{deadlines.filter(deadline => (
-							parseInt(deadline.dueDate.slice(5, 7)) > parseInt(dateString.slice(5, 7)) &&
-							parseInt(deadline.dueDate.slice(8, 10)) > parseInt(dateString.slice(8, 10))
+							(parseInt(deadline.dueDate.slice(5, 7)) > parseInt(dateString.slice(5, 7)) &&
+							(parseInt(deadline.dueDate.slice(8, 10)) + 30 - parseInt(dateString.slice(8, 10))) > 7
+							)
+							||
+							(parseInt(deadline.dueDate.slice(5, 7)) === parseInt(dateString.slice(5, 7)) && 
+							parseInt(deadline.dueDate.slice(8, 10)) - parseInt(dateString.slice(8, 10)) > 7)
 						)).map((filteredDeadline) => (
 							<DeadlineCard key={filteredDeadline._id} deadline={filteredDeadline} />
 						))}
