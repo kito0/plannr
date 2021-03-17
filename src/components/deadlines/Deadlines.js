@@ -88,6 +88,18 @@ export default function Deadlines() {
 					</ul>
 				</AccordionDetails>
 			</Accordion>
+			<Accordion className="accordion">
+				<AccordionSummary>
+					<p>Completed</p>
+				</AccordionSummary>
+				<AccordionDetails>
+					<ul>
+						{deadlines.filter(deadline => (deadline.completed === true)).map((filteredDeadline) => (
+							<DeadlineCard key={filteredDeadline._id} deadline={filteredDeadline} />
+						))}
+					</ul>
+				</AccordionDetails>
+			</Accordion>
 			{/* display this week  */}
 			{/* // display upcoming  */}
 			{/* // display completed */}

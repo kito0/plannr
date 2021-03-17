@@ -14,15 +14,15 @@ export default function DeadlineCard({ deadline }) {
 				<div className="card_content">
 					<div className="content_headers">
 						<div className="content_category">
-							<Typography>
+							<p>
 								{deadline.category}
-							</Typography>
+							</p>
 						</div>
 						
 						<div className="content_description">
-							<Typography>
+							<p>
 								{deadline.description}
-							</Typography>
+							</p>
 						</div>
 					</div>
 					<Typography variant="caption" className="content_date">
