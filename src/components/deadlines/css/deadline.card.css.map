@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACV,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,IAAI;EACnB,gBAAgB,EAAE,uBAAuB;EACzC,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAkB9B;;AAxBD,AAQC,UARS,CAQT,aAAa,CAAC;EACb,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,gBAAgB,EAAE,wBAAwB;CAC1C;;AAZF,AAcC,UAdS,CAcT,aAAa,CAAC;EACb,KAAK,EAAE,GAAG;EACV,gBAAgB,EAAE,IAAI;EACtB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CAInB;;AAvBF,AAoBE,UApBQ,CAcT,aAAa,CAMZ,OAAO,CAAC;EACP,UAAU,EAAE,MAAM;CAClB",
+    "sources": [
+        "deadline.card.scss",
+        "../../../css/_theme.scss"
+    ],
+    "names": [],
+    "file": "deadline.card.css"
+}
